@@ -4,14 +4,13 @@ type Query {
 
 type FaqQuestion {
     id: ID!
-    banner: String
-    coupon_code: String
-    description: String
-    description_title: String
-    heading: String
-    short_description: String
-    subheading: String
-    url: String
+    question: String
+    answer: String
+    position: String
+    active: Boolean
+    store_ids: [String]
+    created_at: String
+    updated_at: String
 }
 
 extend type StoreConfig {
