@@ -1,0 +1,21 @@
+type Query {
+    faqQuestions: [FaqQuestion!]! @resolver(class: "Mtrzk\\FaqPageGraphQl\\Model\\Resolver\\FaqQuestions") @doc(description: "List of FAQ Questions and answers")
+}
+
+type FaqQuestion {
+    id: ID!
+    banner: String
+    coupon_code: String
+    description: String
+    description_title: String
+    heading: String
+    short_description: String
+    subheading: String
+    url: String
+}
+
+extend type StoreConfig {
+    faqpage_general_is_enabled: Boolean @doc(description: "FAQ Page - is enabled")
+    faqpage_general_add_to_menu: String @doc(description: "FAQ Page - add to menu enabled")
+    faqpage_general_faq_menu_name: String @doc(description: "FAQ Page - faq menu name")
+}
